@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tic-Tac-Toe</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Miltonian+Tattoo&family=Shizuru&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hachi+Maru+Pop&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Hachi+Maru+Pop&family=Protest+Revolution&display=swap" rel="stylesheet">
+    <link
+      rel="shortcut icon"
+      href="/1000_F_457491619_xCXhkpSlXCt1BgzGHhQftQU6ymKppa3M.jpg"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="game">
+      <!----------------------------------------------------------------------------  -->
+      <div id="open-container">
+        <div class="items center" id="one">
+          <h1>TIC-TAC-TOE GAME</h1>
+        </div>
+        <div class="items" id="two">
+          <img class="imaagee left" src="/island.png" alt="" />
+        </div>
+        <div class="items center" id="three">
+          <button id="playbutton">Play</button>
+        </div>
+        <div class="items" id="four">
+          <img class="imaagee right" src="/palms.png" alt="" />
+        </div>
+        <div class="items center" id="five">
+          <img src="/tic-tac-toe.png" alt="" />
+        </div>
+      </div>
+      <!----------------------------------------------------------------------------  -->
+      <div class="game-container">
+        <div id="left"></div>
+        <div id="middle">
+          <div id="navbar">
+            <button class="leftbtn" id="new">New Game</button>
+            <button class="leftbtn" id="reset">Reset Game</button>
+            <button class="leftbtn" id="how-to-playa">How To Play</button>
+          </div>
+          <div id="playgame">
+            <button class="btn"></button>
+            <button class="btn"></button>
+            <button class="btn"></button>
+            <button class="btn"></button>
+            <button class="btn"></button>
+            <button class="btn"></button>
+            <button class="btn"></button>
+            <button class="btn"></button>
+            <button class="btn"></button>
+          </div>
+        </div>
+        <div id="right"></div>
+        <div id="win"></div>
+        <div id="pop-up" class="popup">
+
+          <div class="how-to-plays">
+            <div class="hp">
+              <p id="close">&#10006;</p>
+              <h1>Introduction to Tic Tac Toe</h1>
+              <p>Tic Tac Toe, also known as Noughts and Crosses, is a classic paper-and-pencil game enjoyed by people of all ages. The game is played on a 3x3 grid, and the objective is to be the first to form a horizontal, vertical, or diagonal line of three of your own symbols.</p>
+              <img src="/tic-tac1.jpg" alt="tic-tac1">  
+            </div>
+            
+            <div class="hp">
+              <h1>Objective</h1>
+              <p>The goal of Tic Tac Toe is simple: get three of your symbols in a row before your opponent does. Players take turns placing their symbols on the grid, and the game continues until one player achieves the winning pattern or the entire grid is filled.</p>
+              <img src="/tic-tac2.jpg" alt="tic-tac2">  
+            </div>
+            
+            <div class="olul">
+              <h1>Game Setup</h1>
+              <ol>
+                <li>Game Board</li>
+                <ul>
+                  <li>Draw a 3x3 grid on paper or use a digital platform to create the playing board.</li>
+                </ul>
+                <li>Symbols</li>
+                <ul>
+                  <li>Traditionally, one player uses "X," and the other uses "O." You can also use images or any two distinct symbols of your choice.</li>
+                </ul>
+              </ol>
+            </div>
+            
+            <div class="olul">
+              <h1>Gameplay</h1>
+              <ol>
+                <li>Turns</li><ul><li>Players take turns to make a move</li></ul>
+                <li>Placing Symbols</li><ul><li>On your turn, place your symbol (X or O) in an empty cell on the grid</li></ul>
+                <li>Forming a Line</li><ul><li>The objective is to create a line of three of your symbols horizontally, vertically, or diagonally. The line can span across the rows, columns, or diagonals of the grid</li></ul>
+                <li>Winning</li><ul><li>If a player successfully forms a line of three of their symbols, they win the game</li></ul>
+                <li>Draw</li><ul><li>If the entire grid is filled, and no player has formed a winning line, the game is a draw.</li></ul>
+              </ol>
+            </div>
+            
+            <div class="hp">
+              <h1>Strategies</h1>
+              <p>Tic Tac Toe is a game of strategy, and while it might seem simple, there are optimal moves to increase your chances of winning or forcing a draw. Pay attention to your opponent's moves and plan ahead to block their potential winning lines.</p>
+              <img src="/tic-tac3.jpg" alt="tic-tac3">  
+            </div>
+            
+            <div class="hp">
+              <h1>Conclusion</h1>
+              <p>Tic Tac Toe is a timeless and quick game that provides entertainment and a chance to showcase strategic thinking. Whether played on paper, digitally, or even with images, Tic Tac Toe remains a classic choice for friendly competitions and a great way to pass the time. Enjoy the game!</p>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+      <!----------------------------------------------------------------------------  -->
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
