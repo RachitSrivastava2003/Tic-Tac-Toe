@@ -1,5 +1,5 @@
 # Tic-Tac-Toe
-Tic-Tac-Toe Game Created By Using Html , CSS , Javascript./
+Tic-Tac-Toe Game Created By Using Html , CSS , Javascript.
 
 In This Game We Use Animation To Make Game Look Much Better And Use Sound Which Make User Interface Interactive And addictive.
 
