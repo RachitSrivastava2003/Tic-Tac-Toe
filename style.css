@@ -2,21 +2,25 @@
   margin: 0px;
   padding: 0px;
   user-select: none;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 #open-container {
+  /* border:1px solid black; */
   position: absolute;
   z-index: 50;
   background-color: #18cc27;
   height: 100vh;
+  min-width:100vw;
   display: grid;
   grid-template-rows: 1fr 1fr 1fr 1fr;
   grid-template-columns: 1fr 1fr 1fr;
-  /* transform: translateY(-700px); */
+  transform: translateY(-100vh);
 }
 /* ========================== Opening  Animation ============================================================================= */
 .Moveup {
   animation: moveup 8s ease-in-out;
-  transform: translateY(-700px);
+  transform: translateY(-100vh);
 }
 
 @keyframes moveup {
@@ -45,13 +49,13 @@
     transform: translatey(-350px);
   }
   80% {
-    transform: translatey(-450px);
+    transform: translatey(-550px);
   }
   90% {
-    transform: translatey(-600px);
+    transform: translatey(-650px);
   }
   100% {
-    transform: translatey(-700px);
+    transform: translatey(-800px);
   }
 }
 /* ================================================================================================ */
@@ -162,15 +166,270 @@
 }
 #left {
   /* border: 1px solid black; */
-  height: 100%;
+  height: 100vh;
   width: 25%;
+  background-image:url(/water.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
+#left:hover{
+  cursor: none;
+}
+#left img{
+  position:absolute;
+  /* bottom:3vh; */
+  height:14vh;
+  width:6%;
+  border-radius:50%;
+  border: 1px solid whitesmoke;
+  box-shadow: 1px 1px 10px black;
+  /* margin:5px; */
+}
+/* ========================== Left Circle settings and Animations ============================================================= */
+.a{
+  top:3%;
+  animation: bubble_one  8s linear 0.2s infinite;
+}
+
+.b{
+  top:3%;  
+  left:9%;
+  animation: bubble_two  8s linear 0.4s infinite;
+}
+
+.c{
+  top:3%;  
+  left:18%;
+  animation: bubble_three  8s linear 0.8s infinite;
+}
+
+.d{
+  top:20%;  
+  left:5%;
+  animation: bubble_four  8s linear 0.1s infinite;
+}
+
+.e{
+  top:20%;  
+  left:15%; 
+  animation: bubble_mix1  8s linear 1.5s infinite;
+}
+
+.f{
+  bottom:24%;
+  left:5%;
+  animation: bubble_mix  8s linear 1s infinite;
+}
+
+.g{
+  bottom:24%;  
+  left:15%;
+  animation: bubble_mix  8s linear 0.5s infinite;
+}
+
+.h{
+  bottom:3%;
+  animation: bubble_mix1  8s linear 0.5s infinite;
+}
+
+.i{
+  bottom:3%;
+  left:9%;
+  animation: bubble_five  8s linear 0.9s infinite;
+}
+
+.j{
+  bottom:3%;
+  left:18%;
+  animation: bubble_six  8s linear 0.7s infinite;
+}
+/* =================================================================================================================================== */
+@keyframes bubble_one {
+    0%{
+      top:1%;
+      left:2%;
+    } 
+    25%{
+      left:2%;
+      top:20%;
+    } 
+    50%{
+      top:40%;
+      right:9%;
+    }
+    75%{
+      top:50%;
+      left:9%;
+    }
+    100%{
+      top:85%;
+      left:9%;
+    }
+}
+@keyframes bubble_two {
+    0%{
+      top:5%;
+      left:6%;
+    } 
+    25%{
+      left:12%;
+      top:26%;
+    } 
+    50%{
+      top:39%;
+      right:7%;
+    }
+    75%{
+      top:55%;
+      left:18%;
+    }
+    100%{
+      top:80%;
+      left:5%;
+    }
+}
+@keyframes bubble_three {
+    0%{
+      top:2%;
+      left:12%;
+    } 
+    25%{
+      left:4%;
+      top:36%;
+    } 
+    50%{
+      top:12%;
+      right:3%;
+    }
+    75%{
+      top:85%;
+      left:6%;
+    }
+    100%{
+      top:50%;
+      left:5%;
+    }
+}  
+  @keyframes bubble_four {
+      0%{
+        top:1%;
+        left:0%;
+      } 
+      25%{
+        left:6%;
+        top:15%;
+      } 
+      50%{
+        top:84%;
+        left:12%;
+      }
+      75%{
+        top:35%;
+        left:18%;
+      }
+      100%{
+        top:65%;
+        left:1%;
+      }
+  }
+  @keyframes bubble_five {
+    0%{
+      bottom:5%;
+        left:5%;
+      } 
+      25%{
+        bottom:23%;
+        left:1%
+      } 
+      50%{
+        bottom:50%;
+        left:18%;
+      }
+      75%{
+        bottom:85%;
+        left:13%;
+      }
+      100%{
+        bottom:45%;
+        left:9%;
+      }
+    }
+  @keyframes bubble_six {
+    0%{
+      bottom:15%;
+        left:18%;
+      } 
+      25%{
+        bottom:25%;
+        left:9%
+      } 
+      50%{
+        bottom:50%;
+        right:1%;
+      }
+      75%{
+        bottom:75%;
+        left:5%;
+      }
+      100%{
+        bottom:85%;
+        left:2%;
+      }
+    }
+  
+@keyframes bubble_mix {
+    0%{
+      bottom:6%;
+      left:1%;
+    } 
+    25%{
+      bottom:18%;
+      left:18%
+    } 
+    50%{
+      bottom:36%;
+      left:1%;
+    }
+    75%{
+      bottom:50%;
+      left:18%;
+    }
+    100%{
+      bottom:75%;
+      left:1%;
+    }
+}
+@keyframes bubble_mix1 {
+    0%{
+      bottom:18%;
+      left:1%;
+    } 
+    25%{
+      top:13%;
+      left:5%;
+    } 
+    50%{
+      bottom:5%;
+      left:18%;
+    }
+    75%{
+      top:3%;
+      left:5%;
+    }
+    100%{
+      bottom:50%;
+      left:18%;
+    }
+}
+
+/* ====================================================================================================================================== */
 #middle {
   /* border: 1px solid black; */
-  height: 100%;
+  height: 100vh;
   width: 50%;
   /* padding: 2px; */
   background-color: #1cd12b;
+  /* background-image:linear-gradient(to left,#c7c7c7,e9e9e9); */
   display: flex;
   /* justify-content: end; */
   /* align-items: end; */
@@ -178,9 +437,263 @@
 }
 #right {
   /* border: 1px solid black; */
-  height: 100%;
+  height: 100vh;
   width: 25%;
+  background-image:url(/water.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
+#right img{
+  position:absolute;
+  /* bottom:3vh; */
+  height:14vh;
+  width:6%;
+  border-radius:50%;
+  margin:5px;
+  border: 1px solid whitesmoke;
+  box-shadow: 1px 1px 10px black;
+}
+#right:hover{
+  cursor: none;
+}
+/* =========================================================================================================== */
+.k{
+  top:3%;
+  animation: bubble_one_cross  8s linear 0.2s infinite;
+}
+
+.l{
+  top:3%;  
+  right:9%;
+  animation: bubble_two_cross  8s linear 0.4s infinite;
+}
+
+.m{
+  top:3%;  
+  right:18%;
+  animation: bubble_three_cross  8s linear 0.8s infinite;
+}
+
+.n{
+  top:20%;  
+  right:5%;
+  animation: bubble_four_cross  8s linear 0.1s infinite;
+}
+
+.o{
+  top:20%;  
+  right:15%; 
+  animation: bubble_mix1_cross  8s linear 1.5s infinite;
+}
+
+.p{
+  bottom:24%;
+  right:5%;
+  animation: bubble_mix_cross  8s linear 1s infinite;
+}
+
+.q{
+  bottom:24%;  
+  right:15%;
+  animation: bubble_mix_cross  8s linear 0.5s infinite;
+}
+
+.r{
+  bottom:3%;
+  animation: bubble_mix1_cross  8s linear 0.5s infinite;
+}
+
+.s{
+  bottom:3%;
+  right:9%;
+  animation: bubble_five_cross  8s linear 0.9s infinite;
+}
+
+.t{
+  bottom:3%;
+  right:18%;
+  animation: bubble_six_cross  8s linear 0.7s infinite;
+}
+/* =================================================================================================================================== */
+@keyframes bubble_one_cross {
+  0%{
+    top:1%;
+    right:2%;
+  } 
+  25%{
+    right:4%;
+    top:20%;
+  } 
+  50%{
+    top:40%;
+    right:9%;
+  }
+  75%{
+    top:50%;
+    right:7%;
+  }
+  100%{
+    top:85%;
+    right:3%;
+  }
+}
+@keyframes bubble_two_cross {
+  0%{
+    top:5%;
+    right:6%;
+  } 
+  25%{
+    right:12%;
+    top:26%;
+  } 
+  50%{
+    top:39%;
+    right:7%;
+  }
+  75%{
+    top:55%;
+    right:18%;
+  }
+  100%{
+    top:80%;
+    right:5%;
+  }
+}
+@keyframes bubble_three_cross {
+  0%{
+    top:2%;
+    right:12%;
+  } 
+  25%{
+    right:4%;
+    top:36%;
+  } 
+  50%{
+    top:12%;
+    right:3%;
+  }
+  75%{
+    top:85%;
+    right:6%;
+  }
+  100%{
+    top:50%;
+    right:5%;
+  }
+}  
+@keyframes bubble_four_cross {
+    0%{
+      top:1%;
+      right:0%;
+    } 
+    25%{
+      right:6%;
+      top:15%;
+    } 
+    50%{
+      top:84%;
+      right:12%;
+    }
+    75%{
+      top:35%;
+      right:18%;
+    }
+    100%{
+      top:65%;
+      right:1%;
+    }
+}
+@keyframes bubble_five_cross {
+  0%{
+    bottom:5%;
+      right:5%;
+    } 
+    25%{
+      bottom:23%;
+      right:1%
+    } 
+    50%{
+      bottom:50%;
+      right:18%;
+    }
+    75%{
+      bottom:85%;
+      right:13%;
+    }
+    100%{
+      bottom:45%;
+      right:9%;
+    }
+  }
+@keyframes bubble_six_cross {
+  0%{
+    bottom:15%;
+      right:18%;
+    } 
+    25%{
+      bottom:25%;
+      right:9%
+    } 
+    50%{
+      bottom:50%;
+      right:1%;
+    }
+    75%{
+      bottom:75%;
+      right:5%;
+    }
+    100%{
+      bottom:85%;
+      right:2%;
+    }
+  }
+
+@keyframes bubble_mix_cross {
+  0%{
+    bottom:6%;
+    right:1%;
+  } 
+  25%{
+    bottom:18%;
+    right:18%
+  } 
+  50%{
+    bottom:36%;
+    right:1%;
+  }
+  75%{
+    bottom:50%;
+    right:18%;
+  }
+  100%{
+    bottom:75%;
+    right:1%;
+  }
+}
+@keyframes bubble_mix1_cross {
+  0%{
+    bottom:18%;
+    right:1%;
+  } 
+  25%{
+    top:13%;
+    right:5%;
+  } 
+  50%{
+    bottom:5%;
+    right:18%;
+  }
+  75%{
+    top:3%;
+    right:5%;
+  }
+  100%{
+    bottom:50%;
+    right:18%;
+  }
+}
+
+/* ====================================================================================================================================== */
 #navbar {
   /* border: 1px solid black; */
   height: 12%;
@@ -194,7 +707,7 @@
 #navbar>button{
   background-color:#18cc2700;
   border: none;
-  height:94%;
+  height:11.5vh;
   width:32%;
   /* margin:1px; */
   border-radius:1.5rem;
@@ -212,7 +725,7 @@
 #playgame {
   background-color: rgba(0, 100, 0, 0.906);
   /* border: 1px solid black; */
-  height: 100%;
+  height: 100vh;
   width: 85%;
   margin: 20px 0px 30px 49px;
   border-radius: 1.5rem;
@@ -237,7 +750,7 @@
   position:absolute;
   background-color: rgba(0, 0, 0, 0.87);
   z-index: 5;
-  height:100%;
+  height:100vh;
   width:100%;
   display: flex;
   justify-content: center;

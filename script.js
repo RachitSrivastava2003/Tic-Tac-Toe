@@ -13,6 +13,10 @@ let htp = document.querySelector("#how-to-playa");
 let h = document.querySelector(".how-to-plays");
 let closebtn = document.querySelector("#close");
 let ct = document.querySelector("#playgame");
+let left_circle = document.querySelectorAll(".left_circle");
+let right_circle = document.querySelectorAll(".right_circle");
+let left_container = document.querySelector("#left");
+let right_container = document.querySelector("#right");
 //------------------------- Patterns For Checking The Conditon Of winning ----------------------------//
 const pattern = [
   [0, 1, 2],
@@ -187,3 +191,28 @@ closebtn.addEventListener("click",()=>{
   popupp.classList.remove("active");
 })
 // ----------------------------------------------------------------------------------------------------------------//
+left_container.addEventListener("mousemove",(event)=>{
+  // e.preventDefault();  
+  let x = event.clientX;
+  let y = event.clientY;
+  console.log(x);
+  console.log(y);
+  for (const key of left_circle) {
+    key.style.top = y +"px";
+    key.style.left = x +"px";  
+    key.style.transition = "15ms";
+  }
+})
+// ----------------------------------------------------------------------------------------------------------------//
+right_container.addEventListener("mousemove",(event)=>{
+  // e.preventDefault();  
+  let x = event.clientX;
+  let y = event.clientY;
+  console.log(x);
+  console.log(y);
+  for (const key of right_circle) {
+    key.style.top = y +"px";
+    key.style.right = x +"px";  
+    key.style.transition = "15ms";
+  }
+})
