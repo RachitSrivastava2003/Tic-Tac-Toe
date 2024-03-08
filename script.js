@@ -155,7 +155,7 @@ const winmessage = (p)=>{
   const h =document.createElement("h1");
   const i =document.createElement("img");
   const textnode =document.createTextNode(`Winner Is ${p}'s`);
-  i.setAttribute("src","/dubu.gif");
+  i.setAttribute("src","dubu.gif");
   i.setAttribute("alt","winning gif");
   h.appendChild(textnode);
   win.appendChild(h);
@@ -167,7 +167,7 @@ const drawmessage = ()=>{
   const h =document.createElement("h1");
   const i =document.createElement("img");
   const textnode =document.createTextNode(`Draw  !!`);
-  i.setAttribute("src","/tkthao219-bubududu.gif");
+  i.setAttribute("src","tkthao219-bubududu.gif");
   i.setAttribute("alt","Draw gif");
   h.appendChild(textnode);
   win.appendChild(h);
